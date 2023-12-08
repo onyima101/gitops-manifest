@@ -18,7 +18,7 @@ spec:
         app: flaskdemo
     spec:
       containers:
-      - image: onyima101/jenkins-slave:latest
+      - image: onyima101/jenkins-slave:9
         name: flaskdemo
         ports:
         - containerPort: 5000
