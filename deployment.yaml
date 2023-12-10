@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  # creationTimestamp: null
+  creationTimestamp: null
   labels:
     app: flaskdemo
   name: flaskdemo
@@ -13,12 +13,12 @@ spec:
   strategy: {}
   template:
     metadata:
-      # creationTimestamp: null
+      creationTimestamp: null
       labels:
         app: flaskdemo
     spec:
       containers:
-      - image: onyima101/jenkins-slave:10
+      - image: onyima101/jenkins-slave:11
         name: flaskdemo
         resources: {}
 status: {}
@@ -35,4 +35,4 @@ spec:
   - port: 80
     targetPort: 5000
   selector:
-    app: flaskdemo
+    app: flaskdemo    
