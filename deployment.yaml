@@ -18,7 +18,7 @@ spec:
         app: flaskdemo
     spec:
       containers:
-      - image: onyima101/jenkins-slave:10
+      - image: onyima101/jenkins-slave:11
         name: flaskdemo
         resources: {}
 status: {}
