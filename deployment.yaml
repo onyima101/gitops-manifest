@@ -20,8 +20,6 @@ spec:
       containers:
       - image: onyima101/jenkins-slave:10
         name: flaskdemo
-        ports:
-        - containerPort: 5000
         resources: {}
 status: {}
 ---
@@ -29,15 +27,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: lb-service
-  namespace: default
   labels:
     app: lb-service
-    app.kubernetes.io/instance: flaskdemo
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 5000
-    nodePort: 35000
   selector:
     app: flaskdemo
